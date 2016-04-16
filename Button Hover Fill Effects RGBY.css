@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #F7FEFF;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------ */
+/* ------- BUTTON STYLING ------- */
+/* ------------------------------ */
+/* ----------- Buttons ---------- */
+.button-wrapper {
+  width: 50%;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 0;
+}
+
+#buttons {
+  display: block;
+  margin: 100px auto 0;
+  width: 750px;
+}
+
+#buttons a {
+  border-radius: 3px;
+  text-decoration: none;
+  position: relative;
+  font-size: 14pt;
+  display: block;
+  margin: 0 auto 90px;
+  width: 150px;
+  padding: 16px;
+  border: 1px solid #F7FEFF;
+  text-align: center;
+  z-index: 20;
+  transition: color 0.35s cubic-bezier(1, 0, 0, 1);
+}
+
+#buttons #btt1 {
+  color: #66D680;
+  border-color: #66D680;
+}
+
+#buttons #bt2 {
+  border-color: #F05D5E;
+  color: #F05D5E;
+}
+
+#buttons #bt3 {
+  border-color: #0B90CB;
+  color: #0B90CB;
+}
+
+#buttons #bt4 {
+  border-color: #FFA52D;
+  color: #FFA52D;
+}
+
+#buttons #btt1:hover,
+#buttons #bt2:hover,
+#buttons #bt3:hover,
+#buttons #bt4:hover {
+  color: #F7FEFF;
+}
+
+/* --------- Button Fill -------- */
+.bttn::after {
+  content: '';
+  box-sizing: border-box;
+  z-index: -50;
+  position: absolute;
+  transition: all 0.35s cubic-bezier(1, 0, 0, 1);
+}
+
+#btt1::after {
+  bottom: 0;
+  background: #66D680;
+}
+
+#bt2::after {
+  top: 0;
+  background: #F05D5E;
+}
+
+#bt3::after {
+  left: 0;
+  background: #0B90CB;
+}
+
+#bt4::after {
+  right: 0;
+  background: #FFA52D;
+}
+
+#btt1::after,
+#bt2::after {
+  height: 0;
+  width: 100%;
+  left: 0;
+}
+
+#bt3::after,
+#bt4::after {
+  height: 100%;
+  width: 0;
+  top: 0;
+}
+
+#btt1:hover::after,
+#bt2:hover::after {
+  height: 100%;
+}
+
+#bt3:hover::after,
+#bt4:hover::after {
+  width: 100%;
+}
